@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>📺 Медиа портал</title>
+  <link rel="stylesheet" href="project.css">
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <ul>
+        <li onclick="showContent('home')">🏠 Главная</li>
+        <li onclick="showContent('film')">🎬 Фильмы</li>
+        <li onclick="showContent('anime')">🎌 Аниме</li>
+        <li onclick="showContent('manga')">📚 Манга</li>
+        <li onclick="showContent('drama')">📖 Дорамы</li>
+        <li onclick="showContent('series')">🎥 Сериалы</li>
+        <li onclick="showContent('cartoons')">👶 Мультфильмы</li>
+        <li onclick="showContent('animated_series')">📼 Мультсериалы</li>
+      
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <header>
+        <h1>📺 Медиа портал</h1>
+        <section id="content">
+          <h2>Добро пожаловать!</h2>
+        </section>
+               <div id="videoContainer"></div>
+        <div class="search-bar"></div>
+        <input type="text" id="searchInput" placeholder="🔍 Іздеу (атауы бойынша)...">
+
+        <div class="filter-panel">
+          <div class="filter-group">
+            <strong>Год:</strong><br>
+            <label><input type="checkbox" name="year" value="2025"> 2025</label>
+            <label><input type="checkbox" name="year" value="2024"> 2024</label>
+            <label><input type="checkbox" name="year" value="2023"> 2023</label>
+            <label><input type="checkbox" name="year" value="2022"> 2022</label>
+            <label><input type="checkbox" name="year" value="2021"> 2021</label>
+            <label><input type="checkbox" name="year" value="2020"> 2020</label>
+            <label><input type="checkbox" name="year" value="2019"> 2019</label>
+            <label><input type="checkbox" name="year" value="2018"> 2018</label>
+            <label><input type="checkbox" name="year" value="2017"> 2017</label>
+            <label><input type="checkbox" name="year" value="2016"> 2016</label>
+            <label><input type="checkbox" name="year" value="2015"> 2015</label>
+            <label><input type="checkbox" name="year" value="2014"> 2014</label>
+            <label><input type="checkbox" name="year" value="2013"> 2013</label>
+            <label><input type="checkbox" name="year" value="2012"> 2012</label>
+            <label><input type="checkbox" name="year" value="2011"> 2011</label>
+            <label><input type="checkbox" name="year" value="2010"> 2010</label>
+          </div>
+
+          <div class="filter-group">
+            <strong>Жанр:</strong><br>
+            <label><input type="checkbox" name="genre" value="Экшен"> Экшен</label>
+            <label><input type="checkbox" name="genre" value="Драма"> Драма</label>
+            <label><input type="checkbox" name="genre" value="Фантастика"> Фантастика</label>
+            <label><input type="checkbox" name="genre" value="боевик"> Боевик</label>
+            <label><input type="checkbox" name="genre" value="детектив"> Детектив</label>
+            <label><input type="checkbox" name="genre" value="военный"> Военный</label>
+            <label><input type="checkbox" name="genre" value="Комедия"> Комедия</label>
+          </div>
+
+          <div class="filter-group">
+            <strong>Страна:</strong><br>
+            <label><input type="checkbox" name="country" value="Казахстанские"> Казахстанские</label>
+            <label><input type="checkbox" name="country" value="Американские"> Американские</label>
+            <label><input type="checkbox" name="country" value="Российские"> Российские</label>
+            <label><input type="checkbox" name="country" value="Японские"> Японские</label>
+            <label><input type="checkbox" name="country" value="Турецкие"> Турецкие</label>
+            <label><input type="checkbox" name="country" value="Корейские"> Корейские</label>
+          </div>
+        </div>
+
+        <div class="filter-footer">
+          <button onclick="applyFilters()">Применить</button>
+        </div>
+
+        <div class="results" id="results"></div>
+        
+       <label class="theme-toggle">
+  <input type="checkbox" id="darkModeToggle">
+  <span>🌙</span>
+</label>
+
+
+
+
+
+
+
+
+
+      </header>
+    </main>
+  </div>
+
+  <script src="project.js" defer></script>
+</body>
+</html>
